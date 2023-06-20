@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Timer Control</title>
+
+    <script defer src="timer_class.js"></script>
+    <script defer src="demo.js"></script>
+    <link rel="stylesheet" href="timer.css" data-timer>
+</head>
+
+<body>
+    <h1>Custom Timer Demo</h1>
+    <div class="settings">
+        <div data-control>
+            <label for="inpStartTime">Start time: </label>
+            <!-- <input type="text" pattern="(?:[01]|2(?![4-9])){1}\d{1}:[0-5]{1}\d{1}" /> -->
+            <input type="text" id="inpStartTime" value="23:59:50" 
+                pattern="(?:[01]|2(?![4-9])){1}\d{1}:[0-5]{1}\d{1}" 
+                placeholder="hh:mm:ss">
+        </div>
+        <button id="btnCreateTimer" class="demo-button">Create new Timer</button>
+    </div>
+
+    <br><br>
+
+    <div id="divCreated">
+        <div data-control>
+            <label for="jomTimer">Fix HTML-timer</label>
+            <jom-timer id="jomTimer" time="08:15" alarm="8:15:10" hidden></jom-timer>
+            <button id="btnStop" class="demo-button" title="pause timer">II</button>
+        </div>
+    </div>
+
+</body>
+</html>
